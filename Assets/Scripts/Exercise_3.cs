@@ -5,18 +5,29 @@ using UnityEngine.UI;
 
 public class Exercise_3 : MonoBehaviour
 {
-    public Image goku;
 
-    private int left; 
-    private int rigth; 
-    private int top; 
-    private int bottom;
+    public GameObject pivot;
 
     private void Update()
     {
-         if(Input.GetKeyDown(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.D))
         {
-            //goku.transform.transform
+            pivot.transform.position = new Vector3(2, 0, 1);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            pivot.transform.position = new Vector3(0, 2, 1);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            pivot.transform.position = new Vector3(-2, 0, 1);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            pivot.transform.position = new Vector3(0, -2, 1);
         }
     }
 
