@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c700693bf0dd04493d24c4f9aea4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animals:
+  animalsSprite:
   - {fileID: -1173096669, guid: b12204074ba61594387c53ae0155b071, type: 3}
   - {fileID: 1949701964, guid: b12204074ba61594387c53ae0155b071, type: 3}
   - {fileID: -1240651103, guid: b12204074ba61594387c53ae0155b071, type: 3}
@@ -1191,6 +1191,19 @@ MonoBehaviour:
   - {fileID: 535637314, guid: b12204074ba61594387c53ae0155b071, type: 3}
   - {fileID: -1962781062, guid: b12204074ba61594387c53ae0155b071, type: 3}
   - {fileID: -142338975, guid: b12204074ba61594387c53ae0155b071, type: 3}
+  animals:
+  - monkey
+  - rooster
+  - dog
+  - pig
+  - rat
+  - ox
+  - tiger
+  - rabbit
+  - dragon
+  - snake
+  - horse
+  - goat
   userYear: {fileID: 2088231683}
   year: 0
   userHoroscope: 0

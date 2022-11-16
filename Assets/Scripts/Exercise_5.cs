@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Exercise_5 : MonoBehaviour
 {
-    public Sprite[] animals;
+    public Sprite[] animalsSprite;
+    public string[] animals;
 
     public TMP_InputField userYear;
 
@@ -31,8 +32,8 @@ public class Exercise_5 : MonoBehaviour
         questionPanel.SetActive(false);
         solutionPanel.SetActive(true);
 
-        solution.text = $"congatulations, your year is {userHoroscope}";
+        solution.text = $"congatulations, your animal horoscope the {animals[userHoroscope]}";
 
-        imagenAnimal.sprite = animals[userHoroscope];
+        imagenAnimal.sprite = animalsSprite[userHoroscope];
     }
 }
