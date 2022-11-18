@@ -5,40 +5,39 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-
 public class Exercise_4 : MonoBehaviour
 {
-    public string[] anwserA;
-    public string[] anwserB;
+    public string[] anwserA;//array with the anwsers A
+    public string[] anwserB;//array with the anwsers B
 
-    public int anwserNum = 0;
-    public int counterAnswer = 0;
+    public int anwserNum = 0;//sets the number of the question
+    public int counterAnswer = 0;//checks how many answers are well
 
-    public TextMeshProUGUI a;
-    public TextMeshProUGUI b;
-    public TextMeshProUGUI solution;
+    public TextMeshProUGUI a;//put the next option a
+    public TextMeshProUGUI b;//put the next option b
+    public TextMeshProUGUI solution;//shows the solution
 
 
     private void Start()
     {
-        a.text = $"{anwserA[anwserNum]}";
-        b.text = $"{anwserB[anwserNum]}";
-        solution.text = $"You did right {counterAnswer} answers.";
+        a.text = $"{anwserA[anwserNum]}";//shows the first question
+        b.text = $"{anwserB[anwserNum]}";//shows the first question
+        solution.text = $"You did right {counterAnswer} answers.";//shows how many answers are well
     }
 
-    public void AnswerNum(int button)
+    public void AnswerNum(int button)//change the nomber of the question when the button is pressed
     {
-        anwserNum++;
-        a.text = $"{anwserA[anwserNum]}";
-        b.text = $"{anwserB[anwserNum]}";
+        anwserNum++;//pass to the next number
+        a.text = $"{anwserA[anwserNum]}";//shows the next question 
+        b.text = $"{anwserB[anwserNum]}";//shows the next question 
 
-        int randomNum = Random.Range(0, 2);
-        if(randomNum == button)
+        int randomNum = Random.Range(0, 2);//choose one of the two options(a,b)
+        if(randomNum == button)//when the person choose the same number of the random number plus one point to the variable cunter answer
         {
-            counterAnswer++;
+            counterAnswer++;//plus one point 
         }
 
-        solution.text = $"You did right {counterAnswer} answers.";
+        solution.text = $"You did right {counterAnswer} answers.";//shows the number of correct solutions  
     }
 
 }
